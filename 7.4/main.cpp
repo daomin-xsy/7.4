@@ -13,7 +13,7 @@ struct Student
     char rename[20];
     double average;
 };
-bool cmp( Student & a, Student &b )    //比较平均分大小
+bool cmp( Student & a, Student & b )    //比较平均分大小
 {
     return a.average>b.average;
 }
@@ -24,7 +24,7 @@ int main()
     double sum=0;
     out>>number;
     Student student[number];
-    Student  refereename[7];
+    Student refereename[7];
     for(i=0;i<number;i++)
     {
         out>>student[i].index>>student[i].college>>student[i].name;
@@ -53,6 +53,7 @@ int main()
             if(student[i].score[j]==max)
             {
                 student[i].score[j]=0;
+                break;
             }
         }
     }
@@ -78,6 +79,7 @@ int main()
             if(student[i].score[j]==min)
             {
                 student[i].score[j]=0;
+                break;
             }
         }
     }
@@ -96,9 +98,10 @@ int main()
     {
         for(i=0;i<number;i++)
         {
-            in<<left<<setw(5)<<student[i].index<<left<<setw(15)<<student[i].college
-            <<left<<setw(15)<<student[i].name<<left<<setw(5)
-            <<fixed<<setprecision(1)<<student[i].average<<endl;
+            in<<left<<setw(5)<<student[i].index
+            <<left<<setw(15)<<student[i].college
+            <<left<<setw(15)<<student[i].name
+            <<left<<setw(5)<<fixed<<setprecision(1)<<student[i].average<<endl;
         }
         out.close();
     }
