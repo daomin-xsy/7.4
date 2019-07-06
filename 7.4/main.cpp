@@ -1,7 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<math.h>
-#include<algorithm>      //sort
+#include<algorithm>
 #include<iomanip>
 using namespace std;
 struct Student
@@ -13,7 +13,7 @@ struct Student
     char rename[20];
     double average;
 };
-bool cmp( Student & a, Student & b )    //比较平均分大小
+bool cmp( Student & a, Student & b )
 {
     return a.average>b.average;
 }
@@ -101,6 +101,7 @@ int main()
             in<<left<<setw(5)<<student[i].index
             <<left<<setw(15)<<student[i].college
             <<left<<setw(15)<<student[i].name
+            <<left<<setw(15)<<i+1
             <<left<<setw(5)<<fixed<<setprecision(1)<<student[i].average<<endl;
         }
         out.close();
