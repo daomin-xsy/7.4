@@ -96,6 +96,11 @@ int main()
     ofstream in("/Users/s20181105303/Desktop/最终得分.txt");
     if(in.is_open())
     {
+        in<<left<<setw(10)<<"编号"
+        <<left<<setw(20)<<"学院"
+        <<left<<setw(13)<<"姓名"
+        <<left<<setw(18)<<"排名"
+        <<left<<setw(10)<<"分数"<<endl;
         for(i=0;i<number;i++)
         {
             in<<left<<setw(5)<<student[i].index
